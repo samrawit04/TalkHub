@@ -1,6 +1,6 @@
-import { Question } from 'src/questions/Entities/questions.entity';
+import { Question } from '../..//questions/Entities/questions.entity';
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
-import {Response} from 'src/responses/Entities/responses.entity'
+import { Response } from '../../responses/Entities/responses.entity';
 @Entity('users') 
 export class User {
   @PrimaryGeneratedColumn()
@@ -16,10 +16,10 @@ export class User {
   password: string;
 
   @OneToMany(() => Question, (question) => question.user)
-  questions: Question[];
+  question: Question[];
 
   @OneToMany(() => Response, (response) => response.user)
-  responses: Response[];
+  response: Response[];
   
   @CreateDateColumn() 
   createdAt: Date;

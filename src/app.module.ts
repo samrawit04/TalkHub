@@ -8,7 +8,7 @@ import { ResponsesModule } from './responses/responses.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
-  imports: [UserModule, QuestionsModule, ResponsesModule, 
+  imports: [ 
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -16,9 +16,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'postgres',
       password: 'samr1493',
       database: 'TalkHub',
-      entities: [__dirname + '/../**/*.entity.{js,ts}'],
-      synchronize: true, // Set to false in production!
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      synchronize: false, // Set to false in production!
     }),
+    UserModule, QuestionsModule, ResponsesModule,
   ],
   controllers: [AppController, QuestionsController],
   providers: [AppService],

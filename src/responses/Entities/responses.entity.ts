@@ -10,9 +10,9 @@ export class Response {
   @Column('text')
   content: string;
 
-  @ManyToOne(() => User, (user) => user.responses, { onDelete: 'CASCADE' })
+  @ManyToOne(() => User, (user) => user.response, { onDelete: 'CASCADE' })
   user: User;
 
-  @ManyToOne(() => Question, (question) => question.responses, { onDelete: 'CASCADE' })
-  questions: Question;
+  @ManyToOne(() => Question, (question) => question.response, { onDelete: 'CASCADE' })
+  question: Question;
 }
