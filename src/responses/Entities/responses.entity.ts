@@ -13,6 +13,6 @@ export class Response {
   @ManyToOne(() => User, (user) => user.responses, { onDelete: 'CASCADE' })
   user: User;
 
-  @ManyToOne(() => Question, (question) => question.response, { onDelete: 'CASCADE' })
-  question: Question;
+  @ManyToOne(() => Question, (question) => question.responses, { onDelete: 'CASCADE' })
+  questions: Question;
 }

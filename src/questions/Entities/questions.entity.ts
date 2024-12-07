@@ -16,6 +16,6 @@ export class Question {
   @ManyToOne(() => User, (user) => user.questions, { onDelete: 'CASCADE' })
   user: User;
 
-  @OneToMany(() => Response, (response) => response.question)
-  response: Response[];
+  @OneToMany(() => Response, (response) => response.questions)
+  responses: Response[];
 }
