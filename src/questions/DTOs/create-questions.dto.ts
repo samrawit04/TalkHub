@@ -7,8 +7,8 @@ export class CreateQuestionDto {
 
   @IsString()
   @IsNotEmpty({ message: 'Content is required' })
-  content: string;
+  question: string;
 
-  @IsNotEmpty({ message: 'User ID is required' })
-  userId: number;
+  // @IsNotEmpty({ message: 'User ID is required' })
+  // userId: number;
 }

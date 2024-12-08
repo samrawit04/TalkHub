@@ -1,18 +1,18 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
-import { User } from '../../user/Entities/user.entity';
-import { Question } from '../../questions/Entities/questions.entity';
+// import { User } from '../../user/Entities/user.entity';
+// import { Question } from '../../questions/Entities/questions.entity';
 
-@Entity()
+@Entity('responses')
 export class Response {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column('text')
-  content: string;
+  response: string;
 
-  @ManyToOne(() => User, (user) => user.response, { onDelete: 'CASCADE' })
-  user: User;
+  // @ManyToOne(() => User, (user) => user.response, { onDelete: 'CASCADE' })
+  // user: User;
 
-  @ManyToOne(() => Question, (question) => question.response, { onDelete: 'CASCADE' })
-  question: Question;
+  // @ManyToOne(() => Question, (question) => question.response, { onDelete: 'CASCADE' })
+  // question: Question;
 }

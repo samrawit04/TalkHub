@@ -1,7 +1,8 @@
-import { Question } from '../..//questions/Entities/questions.entity';
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, OneToMany } from 'typeorm';
-import { Response } from '../../responses/Entities/responses.entity';
-@Entity('users') 
+// import { Response } from '../../responses/Entities/responses.entity';
+// import { Question } from '../../questions/Entities/questions.entity';
+
+@Entity('users')
 export class User {
   @PrimaryGeneratedColumn()
   id: number;
@@ -15,20 +16,18 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Question, (question) => question.user)
-  question: Question[];
+  // @OneToMany(() => Question, (question) => question.user)
+  // question: Question[];
 
-  @OneToMany(() => Response, (response) => response.user)
-  response: Response[];
-  
-  @CreateDateColumn() 
+  // @OneToMany(() => Response, (response) => response.user)
+  // response: Response[];
+
+  @CreateDateColumn()
   createdAt: Date;
 
-  @UpdateDateColumn() 
+  @UpdateDateColumn()
   updatedAt: Date;
 
   @Column({ default: true })
   isActive: boolean;
 }
-
-

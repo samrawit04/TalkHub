@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
-import { User } from '../../user/Entities/user.entity';
-import { Response } from '../../responses/Entities/responses.entity';
+// import { User } from '../../user/Entities/user.entity';
+// import { Response } from '../../responses/Entities/responses.entity';
 
 @Entity()
 export class Question {
@@ -11,11 +11,12 @@ export class Question {
   title: string;
 
   @Column('text')
-  content: string;
-
-  @ManyToOne(() => User, (user) => user.question, { onDelete: 'CASCADE' })
-  user: User;
-
-  @OneToMany(() => Response, (response) => response.question)
-  response: Response[];
+  question: string;
 }
+
+//   @ManyToOne(() => User, (user) => user.question, { onDelete: 'CASCADE' })
+//   user: User;
+
+//   @OneToMany(() => Response, (response) => response.question)
+//   response: Response[];
+// }

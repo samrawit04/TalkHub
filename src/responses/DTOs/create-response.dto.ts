@@ -3,11 +3,11 @@ import { IsString, IsNotEmpty } from 'class-validator';
 export class CreateResponseDto {
   @IsString()
   @IsNotEmpty({ message: 'Content is required' })
-  content: string;
+  response: string;
 
-  @IsNotEmpty({ message: 'User ID is required' })
-  userId: number;
+  // @IsNotEmpty({ message: 'User ID is required' })
+  // userId: number;
 
-  @IsNotEmpty({ message: 'Question ID is required' })
-  questionId: number;
+  // @IsNotEmpty({ message: 'Question ID is required' })
+  // questionId: number;
 }
