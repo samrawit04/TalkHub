@@ -1,7 +1,7 @@
 import { Controller,Post, Body } from '@nestjs/common';
 import { ResponsesService } from './responses.service';
-import { CreateResponseDto } from './DTOs/create-response.dto';
-import { Response } from './Entities/responses.entity';
+import { CreateResponseDto } from '../DTOs/create-response.dto';
+import { Response } from '../Entities/responses.entity';
 @Controller('responses')
 export class ResponsesController {
 constructor(private readonly responseService:ResponsesService){}

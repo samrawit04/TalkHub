@@ -1,8 +1,8 @@
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Response } from './Entities/responses.entity';
-import { CreateResponseDto } from './DTOs/create-response.dto';
+import { Response } from '../Entities/responses.entity';
+import { CreateResponseDto } from '../DTOs/create-response.dto';
 
 @Injectable()
 export class ResponsesService {
