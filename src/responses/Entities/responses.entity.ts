@@ -1,3 +1,4 @@
+import { Question } from 'src/questions/Entities/questions.entity';
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from 'typeorm';
 // import { User } from '../../user/Entities/user.entity';
 // import { Question } from '../../questions/Entities/questions.entity';

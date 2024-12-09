@@ -12,11 +12,11 @@ export class Question {
 
   @Column('text')
   question: string;
-}
+
 
 //   @ManyToOne(() => User, (user) => user.question, { onDelete: 'CASCADE' })
 //   user: User;
 
-//   @OneToMany(() => Response, (response) => response.question)
-//   response: Response[];
-// }
+  // @OneToMany(() => Response, (response) => response.question)
+  // response: Response[];
+}
