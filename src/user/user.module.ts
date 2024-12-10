@@ -12,6 +12,8 @@ import { ResponsesModule } from '../responses/responses.module'; // Import Respo
   ],
   providers: [UserService],
   controllers: [UserController],
-  exports: [TypeOrmModule], // Export TypeOrmModule if needed by other modules
+  exports: [TypeOrmModule,UserService], // Export TypeOrmModule if needed by other modules
 })
 export class UserModule {}
+
+

@@ -16,7 +16,6 @@ export class Question {
   @Column('text')
   Question: string;
 
-
   @ManyToOne(() => Users, (user) => user.questions, { onDelete: 'CASCADE' })
   user: Users;
 

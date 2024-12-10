@@ -8,6 +8,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 // import { Question } from './Entities/questions.entity';
 // import { Users } from './Entities/user.entity';
 import { AppDataSource } from './data-source';
+import { AuthService } from './auth/auth.service';
+import { AuthController } from './auth/auth.controller';
+import { AuthModule } from './auth/auth.module';
  
 console.log(__dirname + '/**/*.entity.{ts,js}');
 
@@ -18,9 +21,10 @@ console.log(__dirname + '/**/*.entity.{ts,js}');
         return AppDataSource.options; // Use the options from AppDataSource
       },
     }),
+
     UserModule,
     QuestionsModule, 
-    ResponsesModule,
+    ResponsesModule, AuthModule,
   ],
 
   controllers: [AppController],
