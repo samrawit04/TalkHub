@@ -10,7 +10,4 @@ async create(@Body() createresponse: CreateResponseDto):Promise<Response>{
     return this.responseService.create(createresponse);
 }
 
-
-
-
 }
